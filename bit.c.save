@@ -1,0 +1,16 @@
+#include<stdio.h>
+#include<stdlib.h>
+  int main(){
+      struct protocol{
+             unsigned int mask:4;
+             unsigned int checksum:3;       
+     }tcp;
+     tcp.mask=15;
+     printf("%d\n",tcp.mask);
+     tcp.mask=16;
+     printf("%d\n",tcp.mask);
+     printf("%d\n",(int)sizeof(tcp));
+
+     return 0;
+}	
+

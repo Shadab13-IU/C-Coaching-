@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<<string.h>
+    void fillps(char* str,int* lps){
+	int i=1,j=0;
+	int len=str(len);
+	lps[0]=0;
+	while(i<len){
+	  if(str[i]==str[j]){
+	   lps[i]=j+1;
+	   i++;
+	   j++;
+	  }else{
+	    if(j==0){
+	      lps[i]=0;
+	      i++;
+	    }else{
+	      j=lps[j-1];
+	  }
+	}
+ 	}
+

@@ -1,0 +1,15 @@
+#include<stdio.h>
+ int main(){
+     FILE* fptr=fopen("sample.txt","r");
+     // FILE* fptr1=fopen("copy.txt","w"); 
+     // Now performing append operation //
+     FILE* fptr1=fopen("sp.txt","a");  
+     int data;
+     while((data=fgetc(fptr))!=EOF)
+     {
+          fputc(data,fptr1);
+     }
+     fclose(fptr);
+     fclose(fptr1);
+     return 0;
+ }
